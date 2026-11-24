@@ -1,0 +1,9 @@
+import unittest
+from duration_utils import parse_duration
+
+class ParseDurationTests(unittest.TestCase):
+    def test_weeks(self) -> None:
+        self.assertEqual(parse_duration("1w"), 604800)
+
+    def test_combined(self) -> None:
+        self.assertEqual(parse_duration("1h30m"), 5400)
